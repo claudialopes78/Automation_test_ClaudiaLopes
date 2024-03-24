@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.1 on win32)" generated="20240324 16:34:51.046" rpa="false" schemaversion="4">
+<suite id="s1" name="Test Case1" source="C:\Automation_test_ClaudiaLopes\test_cenario\test_case1.robot">
+<test id="s1-t1" name="Cenario 01 - Search a item &quot;men tshirt&quot;" line="8">
+<kw name="Opens the browser" library="home_page_resource" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240324 16:34:51.209" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20240324 16:34:51.209" endtime="20240324 16:34:52.622"/>
+</kw>
+<status status="PASS" starttime="20240324 16:34:51.208" endtime="20240324 16:34:52.622"/>
+</kw>
+<kw name="Navigate to page 'http://automationexercise.com'" library="home_page_resource">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240324 16:34:52.623" level="INFO">Opening url 'https://automationexercise.com/'</msg>
+<status status="PASS" starttime="20240324 16:34:52.623" endtime="20240324 16:34:53.367"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=${Automation_image}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240324 16:34:53.367" endtime="20240324 16:34:54.930"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240324 16:34:54.930" endtime="20240324 16:34:55.052"/>
+</kw>
+<status status="PASS" starttime="20240324 16:34:52.623" endtime="20240324 16:34:55.052"/>
+</kw>
+<kw name="Navigate to page 'Products'" library="home_page_resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=${Menu_products}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240324 16:34:55.053" level="INFO">Clicking element '//a[contains(.,' Products')]'.</msg>
+<status status="PASS" starttime="20240324 16:34:55.053" endtime="20240324 16:34:56.509"/>
+</kw>
+<status status="PASS" starttime="20240324 16:34:55.053" endtime="20240324 16:34:56.509"/>
+</kw>
+<kw name="Verify if search bar is visible" library="home_page_resource">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>locator=${Search_bar}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240324 16:34:56.548" level="INFO">Element '//input[@type='text'][contains(@id,'product')]' is displayed.</msg>
+<status status="PASS" starttime="20240324 16:34:56.512" endtime="20240324 16:34:56.548"/>
+</kw>
+<status status="PASS" starttime="20240324 16:34:56.510" endtime="20240324 16:34:56.548"/>
+</kw>
+<kw name="Write 'men tshirt'" library="home_page_resource">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=${Search_bar}</arg>
+<arg>text=men tshirt</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240324 16:34:56.550" level="INFO">Typing text 'men tshirt' into text field '//input[@type='text'][contains(@id,'product')]'.</msg>
+<status status="PASS" starttime="20240324 16:34:56.549" endtime="20240324 16:34:56.664"/>
+</kw>
+<status status="PASS" starttime="20240324 16:34:56.549" endtime="20240324 16:34:56.664"/>
+</kw>
+<kw name="Click on 'search button'" library="home_page_resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>locator=${Search_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240324 16:34:56.665" level="INFO">Clicking button '//button[@type='button'][contains(@id,'search')]'.</msg>
+<status status="PASS" starttime="20240324 16:34:56.665" endtime="20240324 16:34:57.597"/>
+</kw>
+<status status="PASS" starttime="20240324 16:34:56.665" endtime="20240324 16:34:57.597"/>
+</kw>
+<kw name="Verify 'men tshirt' is visible" library="home_page_resource">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=${Men_tshirt_image}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240324 16:34:57.599" endtime="20240324 16:34:57.680"/>
+</kw>
+<status status="PASS" starttime="20240324 16:34:57.599" endtime="20240324 16:34:57.680"/>
+</kw>
+<kw name="Add product to cart" library="home_page_resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=${View_product}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240324 16:34:57.682" level="INFO">Clicking element '//a[@href='/product_details/2'][contains(.,'View Product')]'.</msg>
+<status status="PASS" starttime="20240324 16:34:57.681" endtime="20240324 16:34:58.577"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=${Add_to_cart_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240324 16:34:58.578" level="INFO">Clicking element '//button[@type='button'][contains(.,'Add to cart')]'.</msg>
+<status status="PASS" starttime="20240324 16:34:58.577" endtime="20240324 16:34:58.628"/>
+</kw>
+<status status="PASS" starttime="20240324 16:34:57.681" endtime="20240324 16:34:58.628"/>
+</kw>
+<kw name="Add a second item to the cart (your choice)" library="home_page_resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=${Polo_product_brand}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240324 16:34:58.630" level="INFO">Clicking element '//a[contains(.,'(6)Polo')]'.</msg>
+<status status="PASS" starttime="20240324 16:34:58.629" endtime="20240324 16:34:59.872"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=${polo_men_image}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240324 16:34:59.872" endtime="20240324 16:34:59.891"/>
+</kw>
+<status status="PASS" starttime="20240324 16:34:58.629" endtime="20240324 16:34:59.891"/>
+</kw>
+<kw name="Click on 'Cart' button" library="home_page_resource">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>locator=${polo_view_product}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20240324 16:34:59.892" level="INFO">Clicking link '//a[@href='/product_details/29'][contains(.,'View Product')]'.</msg>
+<status status="PASS" starttime="20240324 16:34:59.892" endtime="20240324 16:35:01.112"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=${Add_to_cart_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240324 16:35:01.112" level="INFO">Clicking element '//button[@type='button'][contains(.,'Add to cart')]'.</msg>
+<status status="PASS" starttime="20240324 16:35:01.112" endtime="20240324 16:35:01.145"/>
+</kw>
+<status status="PASS" starttime="20240324 16:34:59.891" endtime="20240324 16:35:01.145"/>
+</kw>
+<kw name="Verify that product are visible in cart" library="home_page_resource">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=${View_cart_link}</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240324 16:35:01.146" endtime="20240324 16:35:01.600"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=${View_cart_link}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240324 16:35:01.600" level="INFO">Clicking element '//u[contains(.,'View Cart')]'.</msg>
+<status status="PASS" starttime="20240324 16:35:01.600" endtime="20240324 16:35:03.079"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=${Shopping_cart_image}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240324 16:35:03.079" endtime="20240324 16:35:03.099"/>
+</kw>
+<status status="PASS" starttime="20240324 16:35:01.145" endtime="20240324 16:35:03.099"/>
+</kw>
+<kw name="Closes the browser" library="home_page_resource" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240324 16:35:03.099" endtime="20240324 16:35:05.264"/>
+</kw>
+<status status="PASS" starttime="20240324 16:35:03.099" endtime="20240324 16:35:05.264"/>
+</kw>
+<status status="PASS" starttime="20240324 16:34:51.208" endtime="20240324 16:35:05.265"/>
+</test>
+<status status="PASS" starttime="20240324 16:34:51.047" endtime="20240324 16:35:05.266"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Test Case1">Test Case1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

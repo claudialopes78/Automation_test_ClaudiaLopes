@@ -18,4 +18,4 @@ Cenario 01 - Search a item "men tshirt"
   Add a second item to the cart (your choice)
   Click on 'Cart' button
   Verify that product are visible in cart
-#Verify that the sum of the product values is correct
+  Verify that the sum of the product values is correct
